@@ -6,9 +6,32 @@
 
     <style>
         .container {
-            display: flex;
+            height: 800px;
+            width: 800px;
+            /* top: 50%; */
+            /* left: 50%; */
+            
             flex-wrap: wrap;
+            align-content: flex-start;
+            display: flex;
+            margin:auto;
+            margin-top:10%;
+            flex-basis: 150px;
+            flex-shrink: 0;
+            position: fixed;
+            position: absolute;
+            top:10%;
+            bottom: 0;
+            left: 5%;
+            right: 0;
+            margin: auto;
+  /* bottom: 0; */
+  /* background: rgba(0, 0, 0, 0.5); */
+  /* color: #f1f1f1; */
+  /* width: 100%; */
+  /* padding: 20px; */
         }
+
         .my-circle {
             background-color: #45a99B;
             border-radius: 50%;
@@ -17,49 +40,68 @@
             margin-top: 20px;
             margin-left: 20px;
         }
+        
+        .heading{
+        margin:10px; 
+        /* background-color: brown; */
 
+    }
+    video {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        }
     </style>
 
     <title>Hirst spot painting</title>
 </head>
+<script src="libs/howler.js">
+</script>
 
 <body>
-    
+    <video autoplay muted loop id="myVideo">
+        <source src="output_1.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
 
     <div class="container">
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
+        <div class="heading">
+            <img src="p1/1.bmp" alt="">
+        </div>
+        <div class="heading">
+            <img src="p2/1.bmp" alt="">
+        </div>
+        <div class="heading">
+            <img src="p3/1.bmp" alt="">
+        </div>
+        <div class="heading">
+            <img src="p4/1.bmp" alt="">
+        </div>
+        <div class="heading">
+            <img src="p5/1.bmp" alt="">
+        </div>
+        <div class="heading">
+            <img src="p6/1.bmp" alt="">
+        </div>
+        <div class="heading">
+            <img src="p7/1.bmp" alt="">
+        </div>
+        <div class="heading">
+            <img src="p8/1.bmp" alt="">
+        </div>
+        <div class="heading">
+            <img src="p9/1.bmp" alt="">
+        </div>
     </div>
     
 
 <script>
 
-const makeDiv = () => document.createElement('div');
-
-const container = document.querySelector('.container')
-
-
-const getRandomColor = () => {
-   return `#${Math.floor(Math.random()*16777215).toString(16)}` 
-}
-
-const elements = document.querySelectorAll('.my-circle')
-
-elements.forEach(element => element.style.backgroundColor=getRandomColor());
+const s = new Howl({ src: `output_1.mp4`, html5: false, volume: 0.7, loop: true })
+s.play();
 </script>
 
 
