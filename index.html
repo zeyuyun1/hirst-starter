@@ -101,7 +101,32 @@
 <script>
 
 const s = new Howl({ src: `output_1.mp4`, html5: false, volume: 0.7, loop: true })
-s.play();
+// s.play();
+const boxes = document.body.querySelectorAll('.heading');
+a = boxes[1].querySelector('img')
+
+const step = 3;
+const total_frame = Math.floor(60/step);
+boxes.forEach( (box, index) => {
+    box.n = 0;
+    box.sound = new Howl({ src: `audio/h${index+1}.wav`, html5: false, volume: 0.7, loop: false })
+    box.images =  Array.from({ length: total_frame}, (element, id) => `p${index+1}/${id*step+1}.bmp`);
+    box.addEventListener('click', () => {
+        box.sound.play()
+        box.querySelector('img').src = box.images[box.n];
+        // console.log(box.querySelector('img').style.color = 'red')
+
+        box.n = 1+ box.n%(total_frame-1);
+    })
+    // box.addEventListener('mouseover', () => {
+    //     box.style.backgroundColor='lightgrey';
+    // })
+    // box.addEventListener('mouseout', () => {
+    //     box.style.backgroundColor=0;
+    // })
+})
+// console.log(boxes)
+
 </script>
 
 
