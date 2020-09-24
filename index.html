@@ -20,7 +20,7 @@
             flex-shrink: 0;
             position: fixed;
             position: absolute;
-            top:10%;
+            top:0%;
             bottom: 0;
             left: 5%;
             right: 0;
@@ -43,9 +43,19 @@
         
         .heading{
         margin:10px; 
+        width: 30%;
+            height: 30%;
+
+
+
         /* background-color: brown; */
 
     }
+    img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+      }
     video {
         object-fit: cover;
         width: 100vw;
@@ -69,32 +79,34 @@
 
     <div class="container">
         <div class="heading">
-            <img src="p1/1.bmp" alt="">
+            <img src="stat1.gif" alt="">
         </div>
         <div class="heading">
-            <img src="p2/1.bmp" alt="">
+            <img src="stat1.gif" alt="">
         </div>
         <div class="heading">
-            <img src="p3/1.bmp" alt="">
+            <img src="stat1.gif" alt="">
         </div>
         <div class="heading">
-            <img src="p4/1.bmp" alt="">
+            <img src="stat1.gif" alt="">
         </div>
         <div class="heading">
-            <img src="p5/1.bmp" alt="">
+            <img src="stat1.gif" alt="">
         </div>
         <div class="heading">
-            <img src="p6/1.bmp" alt="">
+            <img src="stat1.gif" alt="">
         </div>
         <div class="heading">
-            <img src="p7/1.bmp" alt="">
+            <img src="stat1.gif" alt="">
         </div>
         <div class="heading">
-            <img src="p8/1.bmp" alt="">
+            <img src="stat1.gif" alt="">
         </div>
         <div class="heading">
-            <img src="p9/1.bmp" alt="">
+            <img src="stat1.gif" alt="">
         </div>
+        <p style="color:white;font-family:'Courier New";>A surge of wave pushed me against the very back of the Place. And the tempo of the sea speeded up. I had to fight the water to get out, and I had to get out. I rolled and scrambled and splashed chest deep in the surf and the brisking waves pushed me against the old sea wall. </p>
+        
     </div>
     
 
@@ -105,7 +117,7 @@ s.play();
 const boxes = document.body.querySelectorAll('.heading');
 a = boxes[1].querySelector('img')
 const sound = new Howl({ src: `audio/h5.wav`, html5: false, volume: 0.7, loop: false })
-const step = 3;
+const step = 5;
 const total_frame = Math.floor(60/step);
 boxes.forEach( (box, index) => {
     box.n = 0;
