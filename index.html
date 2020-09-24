@@ -6,19 +6,20 @@
 
     <style>
         .container {
-            height: 800px;
-            width: 800px;
+            height: 1000px;
+            width: 1000px;
             /* top: 50%; */
             /* left: 50%; */
             
-            flex-wrap: wrap;
-            align-content: flex-start;
-            display: flex;
-            margin:auto;
-            margin-top:10%;
-            flex-basis: 150px;
-            flex-shrink: 0;
-            position: fixed;
+            /* flex-wrap: wrap; */
+            /* align-content: flex-start; */
+            /* display: flex; */
+            /* margin:auto; */
+            /* margin-top:10%; */
+            /* flex-basis: 150px; */
+            /* flex-shrink: 0; */
+            /* position: fixed; */
+            flex: none;
             position: absolute;
             top:10%;
             bottom: 0;
@@ -43,9 +44,75 @@
         
         .heading{
         margin:10px; 
+        border-radius: 30px;
         /* background-color: brown; */
-
     }
+    
+    .imm{
+        left: 0px;
+        top: 0px;
+        margin:10px;
+        width: 80%;
+        height: 60%;
+         /* background-size: cover; */
+        background-image: url("p7/1.bmp");
+        position: absolute;
+    }
+    .box{
+        /* margin:10px; */
+        width: 30%;
+        height: 30%;
+        position: absolute;
+    }
+    .pos1{
+        left: 100px;
+        top: 100px;
+    }
+    .pos2{
+        left: 100px;
+        top: 100px;
+    }
+    .pos3{
+        left: 500px;
+        top: 100px;
+    }
+    .pos4{
+        left: 0px;
+        top: 310px;
+    }
+    .pos5{
+        left: 300px;
+        top: 310px;
+    }
+    .pos6{
+        left: 100px;
+        top: 100px;
+    }
+    .pos7{
+        left: 100px;
+        top: 100px;
+    }
+    .pos8{
+        left: 100px;
+        top: 100px;
+    }
+    .pos9{
+        left: 100px;
+        top: 100px;
+    }
+
+    .tv{
+        /* margin:10px; */
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    .tv img {
+    max-width: 100%;
+    max-height: 100%;
+}
+    
     video {
         object-fit: cover;
         width: 100vw;
@@ -68,7 +135,40 @@
       </video>
 
     <div class="container">
-        <div class="heading">
+        <!-- <div class ="imm"> </div> -->
+        <div class ="box">
+            <div class ="imm"> </div>
+            <div class ="tv"> <img src="tv.png" alt="">  </div>
+        </div>
+        <div class ="box pos1">
+            <div class ="imm"> </div>
+            <div class ="tv"> <img src="tv.png" alt="">  </div>
+        </div>
+        <div class ="box pos2">
+            <div class ="imm"> </div>
+            <div class ="tv"> <img src="tv.png" alt="">  </div>
+        </div>
+        <div class ="box pos3">
+            <div class ="imm"> </div>
+            <div class ="tv"> <img src="tv.png" alt="">  </div>
+        </div>
+        <div class ="box pos4">
+            <div class ="imm"> </div>
+            <div class ="tv"> <img src="tv.png" alt="">  </div>
+        </div>
+        <div class ="box pos5">
+            <div class ="imm"> </div>
+            <div class ="tv"> <img src="tv.png" alt="">  </div>
+        </div>
+        <div class ="box pos6">
+            <div class ="imm"> </div>
+            <div class ="tv"> <img src="tv.png" alt="">  </div>
+        </div>
+        <div class ="box pos7">
+            <div class ="imm"> </div>
+            <div class ="tv"> <img src="tv.png" alt="">  </div>
+        </div>
+        <!-- <div class="heading">
             <img src="p1/1.bmp" alt="">
         </div>
         <div class="heading">
@@ -94,14 +194,14 @@
         </div>
         <div class="heading">
             <img src="p9/1.bmp" alt="">
-        </div>
+        </div> -->
     </div>
     
 
 <script>
 
 const s = new Howl({ src: `output_1.mp4`, html5: false, volume: 0.7, loop: true })
-s.play();
+// s.play();
 const boxes = document.body.querySelectorAll('.heading');
 a = boxes[1].querySelector('img')
 const sound = new Howl({ src: `audio/h5.wav`, html5: false, volume: 0.7, loop: false })
