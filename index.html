@@ -6,8 +6,8 @@
 
     <style>
         .container {
-            height: 800px;
-            width: 800px;
+            height: 600px;
+            width: 600px;
             /* top: 50%; */
             /* left: 50%; */
             
@@ -22,7 +22,7 @@
             position: absolute;
             top:0%;
             bottom: 0;
-            left: 5%;
+            left: 0%;
             right: 0;
             margin: auto;
   /* bottom: 0; */
@@ -44,7 +44,7 @@
         .heading{
         margin:10px; 
         width: 30%;
-            height: 30%;
+        height: 30%;
 
 
 
@@ -66,7 +66,7 @@
         }
     </style>
 
-    <title>Hirst spot painting</title>
+    <title>Untitled</title>
 </head>
 <script src="libs/howler.js">
 </script>
@@ -74,9 +74,7 @@
 <body>
     <video autoplay muted loop id="myVideo">
         <source src="output_1.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
       </video>
-
     <div class="container">
         <div class="heading">
             <img src="stat1.gif" alt="">
@@ -105,15 +103,19 @@
         <div class="heading">
             <img src="stat1.gif" alt="">
         </div>
-        <p style="color:white;font-family:'Courier New";>A surge of wave pushed me against the very back of the Place. And the tempo of the sea speeded up. I had to fight the water to get out, and I had to get out. I rolled and scrambled and splashed chest deep in the surf and the brisking waves pushed me against the old sea wall. </p>
         
+        <p style="color:white;font-family:'Courier New";>A surge of wave pushed me against the very back of the Place. And the tempo of the sea speeded up. I had to fight the water to get out, and I had to get out. I rolled and scrambled and splashed chest deep in the surf and the brisking waves pushed me against the old sea wall. </p>
+        <aside>
+            <p><a href="javascript:history.go(-1)" style="color: white">&lt; Back</a></p>
+        </aside>
     </div>
+    
     
 
 <script>
 
-const s = new Howl({ src: `output_1.mp4`, html5: false, volume: 0.7, loop: true })
-const static = new Howl({ src: `static.mp3`, html5: false, volume: 0.05, loop: true })
+const s = new Howl({ src: `output_1.mp4`, html5: false, volume: 0.5, loop: true })
+const static = new Howl({ src: `static.mp3`, html5: false, volume: 0.02, loop: true })
 s.play();
 const boxes = document.body.querySelectorAll('.heading');
 a = boxes[1].querySelector('img')
